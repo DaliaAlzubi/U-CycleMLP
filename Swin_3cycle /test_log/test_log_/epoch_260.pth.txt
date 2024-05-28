@@ -1,0 +1,168 @@
+[12:15:23.504] Namespace(volume_path='Synapse/test_vol_h5', dataset='Synapse', num_classes=9, list_dir='./lists/lists_Synapse', output_dir='output', max_iterations=30000, max_epochs=150, batch_size=24, snap='output/epoch_260.pth', img_size=224, is_savenii=False, test_save_dir='../predictions', deterministic=1, base_lr=0.05, seed=1234, cfg='configs/swin_tiny_patch4_window7_224_lite.yaml', opts=None, zip=False, cache_mode='part', resume=None, accumulation_steps=None, use_checkpoint=False, amp_opt_level='O1', tag=None, eval=False, throughput=False, Dataset=<class 'datasets.dataset_synapse.Synapse_dataset'>, z_spacing=1, is_pretrain=True)
+[12:15:23.504] epoch_260.pth
+[12:15:23.504] 12 test iterations per epoch
+[12:16:15.574] idx 0 case case0008 mean_dice 0.612881 mean_hd95 26.741382
+[12:16:45.623] idx 1 case case0022 mean_dice 0.844003 mean_hd95 24.589732
+[12:17:19.162] idx 2 case case0038 mean_dice 0.800409 mean_hd95 17.719542
+[12:18:26.735] idx 3 case case0036 mean_dice 0.808547 mean_hd95 44.990209
+[12:19:17.505] idx 4 case case0032 mean_dice 0.792548 mean_hd95 30.673942
+[12:20:04.744] idx 5 case case0002 mean_dice 0.815804 mean_hd95 42.755617
+[12:20:37.142] idx 6 case case0029 mean_dice 0.645448 mean_hd95 46.725791
+[12:21:47.094] idx 7 case case0003 mean_dice 0.591618 mean_hd95 123.245896
+[12:22:38.432] idx 8 case case0001 mean_dice 0.759177 mean_hd95 26.455577
+[12:23:25.834] idx 9 case case0004 mean_dice 0.676493 mean_hd95 34.923132
+[12:23:54.709] idx 10 case case0025 mean_dice 0.762384 mean_hd95 58.977828
+[12:24:21.862] idx 11 case case0035 mean_dice 0.826031 mean_hd95 18.895620
+[12:24:21.878] Mean class 1 mean_dice 0.828813 mean_hd95 20.021134
+[12:24:21.878] Mean class 2 mean_dice 0.661717 mean_hd95 36.278561
+[12:24:21.878] Mean class 3 mean_dice 0.757891 mean_hd95 74.595471
+[12:24:21.879] Mean class 4 mean_dice 0.743531 mean_hd95 85.139056
+[12:24:21.879] Mean class 5 mean_dice 0.914416 mean_hd95 26.713478
+[12:24:21.879] Mean class 6 mean_dice 0.545379 mean_hd95 16.749560
+[12:24:21.879] Mean class 7 mean_dice 0.863338 mean_hd95 41.324262
+[12:24:21.879] Mean class 8 mean_dice 0.641811 mean_hd95 30.307990
+[12:24:21.879] Testing performance in best val model: mean_dice : 0.744612 mean_hd95 : 41.391189
+[08:36:48.620] Namespace(volume_path='Synapse/test_vol_h5', dataset='Synapse', num_classes=9, list_dir='./lists/lists_Synapse', output_dir='output', max_iterations=30000, max_epochs=150, batch_size=24, snap='output/epoch_260.pth', img_size=224, is_savenii=False, test_save_dir='../predictions', deterministic=1, base_lr=0.05, seed=1234, cfg='configs/swin_tiny_patch4_window7_224_lite.yaml', opts=None, zip=False, cache_mode='part', resume=None, accumulation_steps=None, use_checkpoint=False, amp_opt_level='O1', tag=None, eval=False, throughput=False, Dataset=<class 'datasets.dataset_synapse.Synapse_dataset'>, z_spacing=1, is_pretrain=True)
+[08:36:48.620] epoch_260.pth
+[08:36:48.620] 12 test iterations per epoch
+[08:37:40.646] idx 0 case case0008 mean_dice 0.572243 mean_hd95 20.103047
+[08:38:10.839] idx 1 case case0022 mean_dice 0.829706 mean_hd95 12.412609
+[08:38:44.538] idx 2 case case0038 mean_dice 0.784686 mean_hd95 24.238438
+[08:39:51.811] idx 3 case case0036 mean_dice 0.806252 mean_hd95 91.604170
+[08:40:42.292] idx 4 case case0032 mean_dice 0.826273 mean_hd95 11.853858
+[08:41:29.786] idx 5 case case0002 mean_dice 0.803709 mean_hd95 15.809941
+[08:42:02.258] idx 6 case case0029 mean_dice 0.715446 mean_hd95 33.239405
+[08:43:12.048] idx 7 case case0003 mean_dice 0.543121 mean_hd95 104.770711
+[08:44:04.049] idx 8 case case0001 mean_dice 0.662792 mean_hd95 39.509023
+[08:44:52.794] idx 9 case case0004 mean_dice 0.655982 mean_hd95 90.692119
+[08:45:21.358] idx 10 case case0025 mean_dice 0.654270 mean_hd95 58.560013
+[08:45:48.235] idx 11 case case0035 mean_dice 0.819106 mean_hd95 19.479169
+[08:45:48.253] Mean class 1 mean_dice 0.828663 mean_hd95 23.927612
+[08:45:48.253] Mean class 2 mean_dice 0.584744 mean_hd95 91.563435
+[08:45:48.253] Mean class 3 mean_dice 0.793715 mean_hd95 55.690644
+[08:45:48.253] Mean class 4 mean_dice 0.735862 mean_hd95 52.113730
+[08:45:48.254] Mean class 5 mean_dice 0.908050 mean_hd95 52.057676
+[08:45:48.254] Mean class 6 mean_dice 0.468203 mean_hd95 18.521790
+[08:45:48.254] Mean class 7 mean_dice 0.819121 mean_hd95 36.573520
+[08:45:48.254] Mean class 8 mean_dice 0.644033 mean_hd95 17.733261
+[08:45:48.254] Testing performance in best val model: mean_dice : 0.722799 mean_hd95 : 43.522709
+[02:50:48.268] Namespace(volume_path='Synapse/test_vol_h5', dataset='Synapse', num_classes=9, list_dir='./lists/lists_Synapse', output_dir='output', max_iterations=30000, max_epochs=150, batch_size=24, snap='output/epoch_260.pth', img_size=384, is_savenii=False, test_save_dir='../predictions', deterministic=1, base_lr=0.05, seed=1234, cfg='configs/swin_tiny_patch4_window7_224_lite.yaml', opts=None, zip=False, cache_mode='part', resume=None, accumulation_steps=None, use_checkpoint=False, amp_opt_level='O1', tag=None, eval=False, throughput=False, Dataset=<class 'datasets.dataset_synapse.Synapse_dataset'>, z_spacing=1, is_pretrain=True)
+[02:50:48.268] epoch_260.pth
+[02:50:48.268] 12 test iterations per epoch
+[02:51:41.653] idx 0 case case0008 mean_dice 0.541464 mean_hd95 55.833300
+[02:52:12.657] idx 1 case case0022 mean_dice 0.866657 mean_hd95 33.398733
+[02:52:47.071] idx 2 case case0038 mean_dice 0.799519 mean_hd95 46.837520
+[02:53:56.107] idx 3 case case0036 mean_dice 0.754424 mean_hd95 66.843194
+[02:54:48.056] idx 4 case case0032 mean_dice 0.779798 mean_hd95 49.818347
+[02:55:36.405] idx 5 case case0002 mean_dice 0.783750 mean_hd95 27.558353
+[02:56:09.870] idx 6 case case0029 mean_dice 0.771418 mean_hd95 27.216661
+[02:57:21.017] idx 7 case case0003 mean_dice 0.502855 mean_hd95 82.903521
+[02:58:14.046] idx 8 case case0001 mean_dice 0.694898 mean_hd95 52.574588
+[02:59:04.142] idx 9 case case0004 mean_dice 0.651799 mean_hd95 118.928719
+[02:59:33.394] idx 10 case case0025 mean_dice 0.569621 mean_hd95 57.712938
+[03:00:01.367] idx 11 case case0035 mean_dice 0.846279 mean_hd95 8.685215
+[03:00:01.383] Mean class 1 mean_dice 0.833399 mean_hd95 44.234460
+[03:00:01.383] Mean class 2 mean_dice 0.658458 mean_hd95 37.792655
+[03:00:01.383] Mean class 3 mean_dice 0.790860 mean_hd95 40.621821
+[03:00:01.383] Mean class 4 mean_dice 0.698859 mean_hd95 44.683103
+[03:00:01.383] Mean class 5 mean_dice 0.916436 mean_hd95 26.399560
+[03:00:01.383] Mean class 6 mean_dice 0.410266 mean_hd95 20.372919
+[03:00:01.383] Mean class 7 mean_dice 0.786407 mean_hd95 165.819733
+[03:00:01.383] Mean class 8 mean_dice 0.613636 mean_hd95 38.949809
+[03:00:01.383] Testing performance in best val model: mean_dice : 0.713540 mean_hd95 : 52.359257
+[13:03:10.832] Namespace(volume_path='Synapse/test_vol_h5', dataset='Synapse', num_classes=9, list_dir='./lists/lists_Synapse', output_dir='output', max_iterations=30000, max_epochs=150, batch_size=24, snap='output/epoch_260.pth', img_size=224, is_savenii=False, test_save_dir='../predictions', deterministic=1, base_lr=0.05, seed=1234, cfg='configs/swin_tiny_patch4_window7_224_lite.yaml', opts=None, zip=False, cache_mode='part', resume=None, accumulation_steps=None, use_checkpoint=False, amp_opt_level='O1', tag=None, eval=False, throughput=False, Dataset=<class 'datasets.dataset_synapse.Synapse_dataset'>, z_spacing=1, is_pretrain=True)
+[13:03:10.832] epoch_260.pth
+[13:03:10.832] 12 test iterations per epoch
+[13:04:03.338] idx 0 case case0008 mean_dice 0.595159 mean_hd95 40.723979
+[13:04:33.756] idx 1 case case0022 mean_dice 0.805761 mean_hd95 52.503657
+[13:05:07.388] idx 2 case case0038 mean_dice 0.743283 mean_hd95 57.606902
+[13:06:15.523] idx 3 case case0036 mean_dice 0.757278 mean_hd95 89.056364
+[13:07:06.589] idx 4 case case0032 mean_dice 0.816476 mean_hd95 60.890934
+[13:07:54.601] idx 5 case case0002 mean_dice 0.767495 mean_hd95 40.482973
+[13:08:27.089] idx 6 case case0029 mean_dice 0.704206 mean_hd95 61.390744
+[13:09:38.442] idx 7 case case0003 mean_dice 0.592891 mean_hd95 102.082936
+[13:10:31.292] idx 8 case case0001 mean_dice 0.733372 mean_hd95 80.634237
+[13:11:20.025] idx 9 case case0004 mean_dice 0.723279 mean_hd95 107.524900
+[13:11:49.036] idx 10 case case0025 mean_dice 0.760721 mean_hd95 43.406516
+[13:12:16.157] idx 11 case case0035 mean_dice 0.824548 mean_hd95 18.922891
+[13:12:16.174] Mean class 1 mean_dice 0.830074 mean_hd95 18.303743
+[13:12:16.174] Mean class 2 mean_dice 0.660936 mean_hd95 40.706821
+[13:12:16.174] Mean class 3 mean_dice 0.730971 mean_hd95 133.072908
+[13:12:16.174] Mean class 4 mean_dice 0.737516 mean_hd95 71.168323
+[13:12:16.174] Mean class 5 mean_dice 0.927248 mean_hd95 18.909372
+[13:12:16.174] Mean class 6 mean_dice 0.495685 mean_hd95 18.634536
+[13:12:16.174] Mean class 7 mean_dice 0.809218 mean_hd95 163.469474
+[13:12:16.174] Mean class 8 mean_dice 0.691329 mean_hd95 39.219511
+[13:12:16.174] Testing performance in best val model: mean_dice : 0.735372 mean_hd95 : 62.935586
+[19:15:07.479] Namespace(volume_path='Synapse/test_vol_h5', dataset='Synapse', num_classes=9, list_dir='./lists/lists_Synapse', output_dir='output', max_iterations=30000, max_epochs=150, batch_size=24, snap='output/epoch_260.pth', img_size=224, is_savenii=False, test_save_dir='../predictions', deterministic=1, base_lr=0.05, seed=1234, cfg='configs/swin_tiny_patch4_window7_224_lite.yaml', opts=None, zip=False, cache_mode='part', resume=None, accumulation_steps=None, use_checkpoint=False, amp_opt_level='O1', tag=None, eval=False, throughput=False, Dataset=<class 'datasets.dataset_synapse.Synapse_dataset'>, z_spacing=1, is_pretrain=True)
+[19:15:07.479] epoch_260.pth
+[19:15:07.479] 12 test iterations per epoch
+[19:16:01.048] idx 0 case case0008 mean_dice 0.551538 mean_hd95 37.960768
+[19:16:31.885] idx 1 case case0022 mean_dice 0.850828 mean_hd95 39.190175
+[19:17:06.099] idx 2 case case0038 mean_dice 0.784619 mean_hd95 16.228338
+[19:18:14.487] idx 3 case case0036 mean_dice 0.815340 mean_hd95 47.841442
+[19:19:06.271] idx 4 case case0032 mean_dice 0.825078 mean_hd95 45.653940
+[19:19:54.799] idx 5 case case0002 mean_dice 0.787809 mean_hd95 21.680284
+[19:20:28.011] idx 6 case case0029 mean_dice 0.703307 mean_hd95 31.329533
+[19:21:40.072] idx 7 case case0003 mean_dice 0.590642 mean_hd95 107.401458
+[19:22:33.087] idx 8 case case0001 mean_dice 0.718597 mean_hd95 32.793216
+[19:23:21.883] idx 9 case case0004 mean_dice 0.708712 mean_hd95 30.096294
+[19:23:51.222] idx 10 case case0025 mean_dice 0.731349 mean_hd95 36.602820
+[19:24:18.909] idx 11 case case0035 mean_dice 0.783868 mean_hd95 18.287316
+[19:24:18.930] Mean class 1 mean_dice 0.839735 mean_hd95 9.768208
+[19:24:18.930] Mean class 2 mean_dice 0.674806 mean_hd95 36.201004
+[19:24:18.930] Mean class 3 mean_dice 0.798351 mean_hd95 38.792490
+[19:24:18.930] Mean class 4 mean_dice 0.599721 mean_hd95 120.645369
+[19:24:18.930] Mean class 5 mean_dice 0.913302 mean_hd95 17.553680
+[19:24:18.930] Mean class 6 mean_dice 0.484287 mean_hd95 17.619645
+[19:24:18.930] Mean class 7 mean_dice 0.857348 mean_hd95 46.187508
+[19:24:18.930] Mean class 8 mean_dice 0.733575 mean_hd95 23.275820
+[19:24:18.930] Testing performance in best val model: mean_dice : 0.737641 mean_hd95 : 38.755465
+[04:21:30.889] Namespace(volume_path='Synapse/test_vol_h5', dataset='Synapse', num_classes=9, list_dir='./lists/lists_Synapse', output_dir='output', max_iterations=30000, max_epochs=150, batch_size=24, snap='output/epoch_260.pth', img_size=224, is_savenii=False, test_save_dir='../predictions', deterministic=1, base_lr=0.05, seed=1234, cfg='configs/swin_tiny_patch4_window7_224_lite.yaml', opts=None, zip=False, cache_mode='part', resume=None, accumulation_steps=None, use_checkpoint=False, amp_opt_level='O1', tag=None, eval=False, throughput=False, Dataset=<class 'datasets.dataset_synapse.Synapse_dataset'>, z_spacing=1, is_pretrain=True)
+[04:21:30.896] epoch_260.pth
+[04:21:30.896] 12 test iterations per epoch
+[04:22:24.495] idx 0 case case0008 mean_dice 0.510580 mean_hd95 44.279921
+[04:22:55.487] idx 1 case case0022 mean_dice 0.825498 mean_hd95 62.763585
+[04:23:30.174] idx 2 case case0038 mean_dice 0.675734 mean_hd95 56.913288
+[04:24:39.177] idx 3 case case0036 mean_dice 0.711660 mean_hd95 81.252070
+[04:25:31.130] idx 4 case case0032 mean_dice 0.791302 mean_hd95 49.222082
+[04:26:19.907] idx 5 case case0002 mean_dice 0.763316 mean_hd95 37.160116
+[04:26:53.362] idx 6 case case0029 mean_dice 0.516648 mean_hd95 63.062418
+[04:28:05.184] idx 7 case case0003 mean_dice 0.513581 mean_hd95 124.460282
+[04:28:58.439] idx 8 case case0001 mean_dice 0.695792 mean_hd95 50.734055
+[04:29:49.174] idx 9 case case0004 mean_dice 0.677078 mean_hd95 98.969238
+[04:30:18.830] idx 10 case case0025 mean_dice 0.704125 mean_hd95 54.405649
+[04:30:46.633] idx 11 case case0035 mean_dice 0.794388 mean_hd95 22.106793
+[04:30:46.653] Mean class 1 mean_dice 0.824342 mean_hd95 8.429705
+[04:30:46.653] Mean class 2 mean_dice 0.654311 mean_hd95 40.165593
+[04:30:46.653] Mean class 3 mean_dice 0.765442 mean_hd95 95.535426
+[04:30:46.653] Mean class 4 mean_dice 0.504660 mean_hd95 122.893641
+[04:30:46.653] Mean class 5 mean_dice 0.831165 mean_hd95 22.453458
+[04:30:46.653] Mean class 6 mean_dice 0.458015 mean_hd95 18.699974
+[04:30:46.653] Mean class 7 mean_dice 0.689988 mean_hd95 167.545010
+[04:30:46.653] Mean class 8 mean_dice 0.725211 mean_hd95 21.163525
+[04:30:46.653] Testing performance in best val model: mean_dice : 0.681642 mean_hd95 : 62.110791
+[05:05:13.294] Namespace(volume_path='Synapse/test_vol_h5', dataset='Synapse', num_classes=9, list_dir='./lists/lists_Synapse', output_dir='output', max_iterations=30000, max_epochs=150, batch_size=24, snap='output/epoch_260.pth', img_size=384, is_savenii=False, test_save_dir='../predictions', deterministic=1, base_lr=0.05, seed=1234, cfg='configs/swin_tiny_patch4_window7_224_lite.yaml', opts=None, zip=False, cache_mode='part', resume=None, accumulation_steps=None, use_checkpoint=False, amp_opt_level='O1', tag=None, eval=False, throughput=False, Dataset=<class 'datasets.dataset_synapse.Synapse_dataset'>, z_spacing=1, is_pretrain=True)
+[05:05:13.294] epoch_260.pth
+[05:05:13.295] 12 test iterations per epoch
+[05:06:08.131] idx 0 case case0008 mean_dice 0.625767 mean_hd95 34.890713
+[05:06:40.015] idx 1 case case0022 mean_dice 0.842314 mean_hd95 30.144995
+[05:07:15.900] idx 2 case case0038 mean_dice 0.728815 mean_hd95 49.159218
+[05:08:27.161] idx 3 case case0036 mean_dice 0.817990 mean_hd95 45.513436
+[05:09:20.215] idx 4 case case0032 mean_dice 0.859845 mean_hd95 15.311086
+[05:10:10.592] idx 5 case case0002 mean_dice 0.825321 mean_hd95 26.751803
+[05:10:44.958] idx 6 case case0029 mean_dice 0.808949 mean_hd95 23.497601
+[05:11:59.873] idx 7 case case0003 mean_dice 0.571920 mean_hd95 125.079040
+[05:12:54.485] idx 8 case case0001 mean_dice 0.799453 mean_hd95 35.386187
+[05:13:46.268] idx 9 case case0004 mean_dice 0.671076 mean_hd95 80.333686
+[05:14:16.622] idx 10 case case0025 mean_dice 0.660487 mean_hd95 63.338164
+[05:14:45.611] idx 11 case case0035 mean_dice 0.842457 mean_hd95 23.667763
+[05:14:45.638] Mean class 1 mean_dice 0.847189 mean_hd95 31.999592
+[05:14:45.638] Mean class 2 mean_dice 0.651841 mean_hd95 46.438380
+[05:14:45.638] Mean class 3 mean_dice 0.786550 mean_hd95 58.763157
+[05:14:45.638] Mean class 4 mean_dice 0.744630 mean_hd95 114.792023
+[05:14:45.638] Mean class 5 mean_dice 0.925555 mean_hd95 35.241349
+[05:14:45.638] Mean class 6 mean_dice 0.518146 mean_hd95 16.208596
+[05:14:45.638] Mean class 7 mean_dice 0.836096 mean_hd95 39.363041
+[05:14:45.638] Mean class 8 mean_dice 0.726255 mean_hd95 25.909657
+[05:14:45.638] Testing performance in best val model: mean_dice : 0.754533 mean_hd95 : 46.089474
