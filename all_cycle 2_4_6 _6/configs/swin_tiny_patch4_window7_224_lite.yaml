@@ -1,0 +1,13 @@
+MODEL:
+  TYPE: swin
+  NAME: swin_tiny_patch4_window7_224
+  DROP_PATH_RATE: 0.2
+  PRETRAIN_CKPT: "./pretrained_ckpt/swin_tiny_patch4_window7_224.pth"
+  SWIN:
+    FINAL_UPSAMPLE: "expand_first"
+    EMBED_DIM: 96
+    DEPTHS: [ 2, 4, 6,6, 2 ]
+    DECODER_DEPTHS: [ 1,6,6, 4, 2]
+    NUM_HEADS: [ 3, 6, 12, 24,48]
+    WINDOW_SIZE: 7
+
