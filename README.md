@@ -6,5 +6,4 @@ Objectives:
 To outperform existing baseline methods in medical image segmentation.
 To provide a robust and efficient solution for medical professionals and researchers.
 To contribute to the advancement of medical imaging technology through state-of-the-art deep learning techniques.
-![Cy](https://github.com/DaliaAlzubi/U-CycleMLP/assets/86482704/9069f804-3430-4653-8c9d-243fdcb33f94)
-
+![graph1](https://github.com/DaliaAlzubi/U-CycleMLP/assets/86482704/35238f0d-6411-41b1-9eeb-adcb4c1e7586)
