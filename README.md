@@ -11,7 +11,7 @@ We aim to develop a new segmentation model based on the Cycle MLP architecture w
 ## **Key Features**
 
 - **U-shaped Encoder-Decoder Architecture**: Utilizes a U-shaped design with Cycle MLP blocks, enabling effective capture of both local and global features.
-- **Multi-Scale Feature Learning**: Incorporates patch partitioning, merging layers, and skip connections to handle varying image resolutions and enhance feature learning.
+- **Multi-Scale Feature Learning**: Incorporates patch partitioning, merging layers, expanding layers, and skip connections to handle varying image resolutions and enhance feature learning.
 - **High Computational Efficiency**: Designed to be lightweight with reduced computational complexity, allowing for faster inference speeds without compromising accuracy.
 - **Real-Time Application**: Suitable for real-time medical applications, providing quick and reliable segmentation results.
 
