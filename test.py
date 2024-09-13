@@ -342,7 +342,7 @@ if __name__ == "__main__":
         fn = 0
         hd95_total = []
         with torch.no_grad():
-            for x, y, z in test_loader:
+            for x, y, z in tqdm(test_loader):
                 x = x.to('cuda')
                 y = y.to('cuda').unsqueeze(1)
                 preds = net(x)
@@ -413,7 +413,7 @@ if __name__ == "__main__":
         fn = 0
         hd95_total = []
         with torch.no_grad():
-            for x, y, z in test_loader:
+            for x, y, z in tqdm(test_loader):
                 x = x.to('cuda')
                 y = y.to('cuda').unsqueeze(1)
                 preds = net(x)
@@ -432,7 +432,7 @@ if __name__ == "__main__":
                 # Compute HD95
                 hd95 = compute_hd95(preds, y)
                 hd95_total.append(hd95)
-                save_collages(x.cpu().squeeze(0), y.cpu().squeeze(0), 
+                save_isic_collages(x.cpu().squeeze(0), y.cpu().squeeze(0), 
                                   preds.cpu().squeeze(0), RESULTS_FLDER_PATH, z[0])
 
 
