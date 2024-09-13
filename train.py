@@ -1,13 +1,9 @@
 import argparse
-import logging
-import os
 import random
 import numpy as np
 import torch
 import torch.backends.cudnn as cudnn
-from networks.vision_transformer import CycleUnet as ViT_seg
 from trainer import trainer_synapse
-from config import get_config
 from datetime import datetime
 from trainer_ACDC import trainer_ACDC
 from trainer_BUSI import trainer_BUSI

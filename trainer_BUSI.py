@@ -227,13 +227,15 @@ def trainer_BUSI(args, model, snapshot_path,nodes_snapshot_path='BUSI_current_sn
     print("The length of train loader is: {}".format(len(train_loader)))
     print("The length of validation loader is: {}".format(len(val_loader)))
     LAST_EPOCH=0
-    savebest_model_path=os.path.join(snapshot_path, 'best_BUSI_model.pth')
+    savebest_model_path=os.path.join(snapshot_path, f'best_BUSI_model_{args.busi_class}.pth')
     
     if os.path.exists(savebest_model_path):
         print(f'model snapshot exists, loading pretrained weights into the model')
         model=model.load_state_dict(torch.load(savebest_model_path))
     else:
         print(f'model snapshot does not exist, training from scratch')
+    
+    print(type(model))
     model.train()
     
     loss_fn = nn.BCEWithLogitsLoss()

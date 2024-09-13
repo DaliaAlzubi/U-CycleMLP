@@ -10,7 +10,7 @@ class BUSIDataset(Dataset):
         self.base_path = base_path
         self.transform = transform
         self.busi_class = busi_class
-        self.pattern = r'benign \((\d+)\)'
+        
         # Define paths
         self.benign_path = os.path.join(self.base_path, 'benign')
         self.malignant_path = os.path.join(self.base_path, 'malignant')
@@ -20,8 +20,10 @@ class BUSIDataset(Dataset):
         malignant_file_names = sorted(os.listdir(self.malignant_path))
         if self.busi_class == 'benign':
             self.all_files_names = benign_file_names
+            self.pattern = r'benign \((\d+)\)'
         elif self.busi_class == 'malignant':
             self.all_files_names = malignant_file_names
+            self.pattern = r'malignant \((\d+)\)'
         else:
             raise ValueError(f"Unknown busi_class: {self.busi_class}")
 

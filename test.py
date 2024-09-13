@@ -89,6 +89,7 @@ def save_isic_collages(images, masks, predictions, output_dir, case_name):
         
         # Save the collage
         if case_name is not None:
+            print(case_name)
             collage_path = os.path.join(output_dir, f'{case_name}_collage_{i}.png')
             plt.savefig(collage_path, bbox_inches='tight')
             plt.close(fig)
@@ -171,6 +172,10 @@ parser.add_argument('--amp-opt-level', type=str, default='O1', choices=['O0', 'O
 parser.add_argument('--tag', help='tag of experiment')
 parser.add_argument('--eval', action='store_true', help='Perform evaluation only')
 parser.add_argument('--throughput', action='store_true', help='Test throughput only')
+parser.add_argument('--busi_class', type=str,
+                    default=None, help='input busi class name: benign or malignant', choices=['benign', 'malignant'])
+
+
 
 args = parser.parse_args()
 #config = get_config(args)
@@ -313,7 +318,8 @@ if __name__ == "__main__":
             
         
     elif args.dataset == "BUSI":
-        RESULTS_FLDER_PATH = os.path.join(args.output_dir, 'BUSI_TEST_OUTPUTS/')
+        print(f'Current busi class is {args.busi_class}')
+        RESULTS_FLDER_PATH = os.path.join(args.output_dir, f'BUSI_{args.busi_class}_TEST_OUTPUTS/')
         os.makedirs(RESULTS_FLDER_PATH, exist_ok=True)
         snapshot = os.path.join(args.output_dir, args.pretrained_model_path)        
 
@@ -323,6 +329,7 @@ if __name__ == "__main__":
         test_ds = BUSIDataset(
         base_path='../Dataset_BUSI_with_GT',
         split='val',
+        busi_class=args.busi_class,
         transform=test_transforms,
     )
         test_loader = DataLoader(
@@ -379,7 +386,7 @@ if __name__ == "__main__":
 }
 
         df = pd.DataFrame(data)
-        df.to_csv(f'{args.output_dir}/test_BUSI_metrics.csv')
+        df.to_csv(f'{args.output_dir}/test_BUSI_metrics_{args.busi_class}.csv')
 
     elif args.dataset == "ISIC":
         
