@@ -265,7 +265,10 @@ if __name__ == "__main__":
                 if len(flattened_metrics) == len(header):
                     # Append the row to the DataFrame
                     rows.append(flattened_metrics)
+        rows = np.array(rows)
         df = pd.DataFrame(rows, columns=header)
+        data = df.mean().values.flatten().reshape(-1, 8)
+        df=pd.DataFrame(data, columns=header)
         df.to_csv(f'{args.output_dir}/ACDC_metrics_for_each_class.csv', index=False)
             
         
