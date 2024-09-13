@@ -5,10 +5,11 @@ from torch.utils.data import Dataset
 from torchvision import transforms as T
 import re
 class BUSIDataset(Dataset):
-    def __init__(self, base_path, split, transform=None):
+    def __init__(self, base_path, split, busi_class, transform=None):
         self.split = split
         self.base_path = base_path
         self.transform = transform
+        self.busi_class = busi_class
         self.pattern = r'benign \((\d+)\)'
         # Define paths
         self.benign_path = os.path.join(self.base_path, 'benign')
@@ -17,7 +18,12 @@ class BUSIDataset(Dataset):
         # Load filenames
         benign_file_names = sorted(os.listdir(self.benign_path))
         malignant_file_names = sorted(os.listdir(self.malignant_path))
-        self.all_files_names = benign_file_names# + malignant_file_names
+        if self.busi_class == 'benign':
+            self.all_files_names = benign_file_names
+        elif self.busi_class == 'malignant':
+            self.all_files_names = malignant_file_names
+        else:
+            raise ValueError(f"Unknown busi_class: {self.busi_class}")
 
         # Prepare image-label pairs
         self.image_label_pairs = []

@@ -196,6 +196,7 @@ def trainer_BUSI(args, model, snapshot_path,nodes_snapshot_path='BUSI_current_sn
     train_ds = BUSIDataset(
     base_path='../Dataset_BUSI_with_GT',
     split='train',
+    busi_class=args.busi_class,
     transform=train_transforms,
 )
 
@@ -210,6 +211,7 @@ def trainer_BUSI(args, model, snapshot_path,nodes_snapshot_path='BUSI_current_sn
     val_ds = BUSIDataset(
         base_path='../Dataset_BUSI_with_GT',
         split='val',
+        busi_class=args.busi_class,
         transform=val_transforms,
     )
 

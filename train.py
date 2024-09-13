@@ -60,6 +60,8 @@ parser.add_argument('--amp-opt-level', type=str, default='O1', choices=['O0', 'O
 parser.add_argument('--tag', help='tag of experiment')
 parser.add_argument('--eval', action='store_true', help='Perform evaluation only')
 parser.add_argument('--throughput', action='store_true', help='Test throughput only')
+parser.add_argument('--busi_class', type=str,
+                    default=None, help='input busi class name: benign or malignant', choices=['benign', 'malignant'])
 
 args = parser.parse_args()
 
