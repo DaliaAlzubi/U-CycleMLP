@@ -8,15 +8,23 @@ import torch.backends.cudnn as cudnn
 from torch.utils.data import DataLoader
 import albumentations as A
 import torch
+from medpy import metric
 from albumentations.pytorch import ToTensorV2
 from dataset_ACDC import ACDC_dataset
+from tqdm import tqdm
 from dataset_BUSI import BUSIDataset
 from dataset_ISIC import ISICDataset
 from pab import DAWEU_NET
 from scipy.ndimage import zoom
 import torch
 print(torch.cuda.is_available())
+import pandas as pd
 
+# Define the header
+header = [
+    'class 1 mean dice', 'class 1 hd95', 'class 2 mean dice', 'class 2 hd95',
+    'class 3 mean dice', 'class 3 hd95', 'class 4 mean dice', 'class 4 hd95'
+]
 def save_collages(images, masks, predictions, output_dir, case_name):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -86,7 +94,17 @@ def save_isic_collages(images, masks, predictions, output_dir, case_name):
             plt.savefig(collage_path, bbox_inches='tight')
             plt.close(fig)
 
-
+def calculate_metric_percase(pred, gt):
+    pred[pred > 0] = 1
+    gt[gt > 0] = 1
+    if pred.sum() > 0 and gt.sum()>0:
+        dice = metric.binary.dc(pred, gt)
+        hd95 = metric.binary.hd95(pred, gt)
+        return dice, hd95
+    elif pred.sum() > 0 and gt.sum()==0:
+        return 1, 0
+    else:
+        return 0, 0
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--volume_path', type=str,
@@ -157,6 +175,11 @@ def test_single_volume(image, label, net, patch_size=[224, 224], test_save_path=
                 prediction[ind] = pred
         if test_save_path is not None:
             save_collages(image, label, prediction, test_save_path, case_name)
+    metric_list = []
+    for i in range(0, 4):
+        metric_list.append(calculate_metric_percase(prediction == i, label == i))
+    return metric_list
+
     
    
 if __name__ == "__main__":
@@ -220,6 +243,7 @@ if __name__ == "__main__":
     net.eval()
     #define the snapshot path and test dataset
     if args.dataset == "ACDC":
+        
         RESULTS_FLDER_PATH = os.path.join(args.output_dir, 'ACDC_TEST_OUTPUTS/')
         os.makedirs(RESULTS_FLDER_PATH, exist_ok=True)
         snapshot = os.path.join(args.output_dir, args.pretrained_model_path)
@@ -230,12 +254,19 @@ if __name__ == "__main__":
         print(f"pre-trained model loaded from {snapshot} for evalutation on {args.dataset} dataset")
         test_loader = DataLoader(db_test, batch_size=1, shuffle=False, num_workers=2, pin_memory=True,)
         print(f"Testing on {args.dataset} dataset with {len(test_loader)} batches")
+        rows = []
         with torch.no_grad():
-            for _, sampled_batch in enumerate(test_loader):
+            for _, sampled_batch in enumerate(tqdm(test_loader)):
                 image, label, case_name = sampled_batch["image"], sampled_batch["label"], sampled_batch['case_name'][0]
-                test_single_volume(image, label, net, patch_size=[224, 224], 
+                metric_i = test_single_volume(image, label, net, patch_size=[224, 224], 
                                    test_save_path=RESULTS_FLDER_PATH, case_name=case_name)
-
+                metric_i = np.array(metric_i)
+                flattened_metrics = [item for sublist in metric_i for item in sublist]
+                if len(flattened_metrics) == len(header):
+                    # Append the row to the DataFrame
+                    rows.append(flattened_metrics)
+        df = pd.DataFrame(rows, columns=header)
+        df.to_csv(f'{args.output_dir}/ACDC_metrics_for_each_class.csv', index=False)
             
         
     elif args.dataset == "BUSI":
@@ -262,7 +293,7 @@ if __name__ == "__main__":
         print(f"Testing on {args.dataset} dataset with {len(test_loader)} batches")
         net.eval()
         with torch.no_grad():
-            for x, y, z in test_loader:
+            for x, y, z in tqdm(test_loader):
                 x = x.to('cuda')
                 y = y.to('cuda').unsqueeze(1)
                 preds = torch.sigmoid(net(x))
@@ -296,7 +327,7 @@ if __name__ == "__main__":
         print(f"Testing on {args.dataset} dataset with {len(test_loader)} batches")
         net.eval()
         with torch.no_grad():
-            for x, y, z in test_loader:
+            for x, y, z in tqdm(test_loader):
                 x = x.to('cuda')
               
                 y = y.to('cuda').unsqueeze(1)
