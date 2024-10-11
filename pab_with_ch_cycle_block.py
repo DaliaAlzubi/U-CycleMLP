@@ -381,11 +381,11 @@ class DAWEU_NET(nn.Module):
         self.n_channels = n_channels
         self.n_classes = n_classes
         self.bilinear = bilinear
-        self.cawe1 = nn.Sequential(CAWEBlock(32),nn.Sigmoid())
-        self.cawe2 = nn.Sequential(CAWEBlock(64),nn.Sigmoid())
-        self.cawe3 = nn.Sequential(CAWEBlock(128),nn.Sigmoid())
-        self.cawe4 = nn.Sequential(CAWEBlock(256),nn.Sigmoid())
-        self.cawe5 = nn.Sequential(CAWEBlock(512),nn.Sigmoid())
+        self.cawe1 = nn.Sequential(CAWEBlock(32),arya_cycleblock(32),nn.Sigmoid())
+        self.cawe2 = nn.Sequential(CAWEBlock(64),arya_cycleblock(64),nn.Sigmoid())
+        self.cawe3 = nn.Sequential(CAWEBlock(128),arya_cycleblock(128),nn.Sigmoid())
+        self.cawe4 = nn.Sequential(CAWEBlock(256),arya_cycleblock(256),nn.Sigmoid())
+        self.cawe5 = nn.Sequential(CAWEBlock(512),arya_cycleblock(512),nn.Sigmoid())
         self.pawe1 = PAWEBlock(32)
         self.pawe2 = PAWEBlock(64)
         self.pawe3 = PAWEBlock(128)
