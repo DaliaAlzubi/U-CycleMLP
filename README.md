@@ -1,1 +1,1 @@
-# cycle_block_da_block_acdc_busi_isic_segmentation
+#Bridging Spatial Awareness and Global Context in Medical Image Segmentation
