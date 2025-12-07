@@ -1,2 +1,2 @@
 #Bridging Spatial Awareness and Global Context in Medical Image Segmentation
-<img width="2940" height="1604" alt="image" src="https://github.com/user-attachments/assets/b2e1e589-6791-4134-b8d4-8b8369bfda12" />
+ <img width="1428" height="1367" alt="image" src="https://github.com/user-attachments/assets/f1c6516d-1884-480c-a691-f1f8c5e24084" />
